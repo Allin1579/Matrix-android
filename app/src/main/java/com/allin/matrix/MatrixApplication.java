@@ -5,7 +5,8 @@ import android.app.Application;
 import com.allin.matrix.util.LogUtil;
 
 /**
- * Created by a on 2016/4/29.
+ * Created by a on 2016/6/20.
+ * Author: Allin
  */
 public class MatrixApplication extends Application {
     private final String TAG = "MatrixApplication";

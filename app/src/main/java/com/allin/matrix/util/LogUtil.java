@@ -6,6 +6,7 @@ import com.allin.matrix.Config;
 
 /**
  * Created by a on 2016/6/20.
+ * Author: Allin
  */
 public class LogUtil {
     private static final int N = -1;

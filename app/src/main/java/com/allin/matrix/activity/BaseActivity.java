@@ -7,6 +7,7 @@ import com.allin.matrix.util.LogUtil;
 
 /**
  * Created by a on 2016/4/29.
+ * Author: Allin
  */
 class BaseActivity extends Activity {
     protected final String TAG = getTAG();
