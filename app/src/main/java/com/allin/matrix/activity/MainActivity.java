@@ -27,7 +27,7 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.activity_main);
 
         listView = (ListView) findViewById(R.id.list);
-       ListAdapter adapter = new MainAdapter(activitys);
+        ListAdapter adapter = new MainAdapter(activitys);
         listView.setAdapter(adapter);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
