@@ -39,10 +39,7 @@ public class TabActivity extends BaseActivity {
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
 
         mViewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), mFragments, titles));
-//        mTabLayout.setTabsFromPagerAdapter(null);
-        mTabLayout.addTab(mTabLayout.newTab().setText(titles[0]));
-        mTabLayout.addTab(mTabLayout.newTab().setText(titles[1]));
-        mTabLayout.addTab(mTabLayout.newTab().setText(titles[2]));
+
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);
         mTabLayout.setupWithViewPager(mViewPager);
 
