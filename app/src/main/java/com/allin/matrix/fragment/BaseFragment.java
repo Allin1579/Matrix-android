@@ -1,6 +1,5 @@
 package com.allin.matrix.fragment;
 
-import android.animation.Animator;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
