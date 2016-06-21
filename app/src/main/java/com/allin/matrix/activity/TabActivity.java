@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.TextView;
 
 import com.allin.matrix.R;
 import com.allin.matrix.adapter.TabFragmentAdapter;
@@ -41,6 +44,10 @@ public class TabActivity extends BaseActivity {
         mViewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), mFragments, titles));
 
         mTabLayout.setupWithViewPager(mViewPager);
+        for (int i = 0; i < mTabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = mTabLayout.getTabAt(i);
+            tab.setCustomView(getTabView(i));
+        }
         mTabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -57,6 +64,13 @@ public class TabActivity extends BaseActivity {
 
             }
         });
+    }
+
+    private View getTabView(int position){
+        View view = LayoutInflater.from(this).inflate(R.layout.activity_tab_item, null);
+        TextView textView = (TextView) view.findViewById(R.id.text);
+        textView.setText(titles[position]);
+        return view;
     }
 
 }
