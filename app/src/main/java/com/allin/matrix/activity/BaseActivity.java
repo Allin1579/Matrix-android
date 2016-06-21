@@ -1,7 +1,7 @@
 package com.allin.matrix.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 
 import com.allin.matrix.util.LogUtil;
 
@@ -9,7 +9,7 @@ import com.allin.matrix.util.LogUtil;
  * Created by a on 2016/4/29.
  * Author: Allin
  */
-class BaseActivity extends Activity {
+class BaseActivity extends FragmentActivity {
     protected final String TAG = getTAG();
 
     @Override
