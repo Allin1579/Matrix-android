@@ -40,9 +40,7 @@ public class TabActivity extends BaseActivity {
 
         mViewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), mFragments, titles));
 
-        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
         mTabLayout.setupWithViewPager(mViewPager);
-
         mTabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
