@@ -70,6 +70,9 @@ public class TabActivity extends BaseActivity {
         View view = LayoutInflater.from(this).inflate(R.layout.activity_tab_item, null);
         TextView textView = (TextView) view.findViewById(R.id.text);
         textView.setText(titles[position]);
+        if(position == 0){
+            view.setSelected(true);
+        }
         return view;
     }
 
