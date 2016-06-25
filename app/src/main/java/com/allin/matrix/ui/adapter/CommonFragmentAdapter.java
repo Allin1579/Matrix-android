@@ -8,16 +8,16 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by a on 2016/6/21.
  * Author: Allin
  */
-public class TabFragmentAdapter extends FragmentPagerAdapter {
+public class CommonFragmentAdapter extends FragmentPagerAdapter {
     private Fragment[] fragments;
     private String[] titles;
 
-    public TabFragmentAdapter(FragmentManager fm, Fragment[] fragments) {
+    public CommonFragmentAdapter(FragmentManager fm, Fragment[] fragments) {
         super(fm);
         this.fragments = fragments;
     }
 
-    public TabFragmentAdapter(FragmentManager fm, Fragment[] fragments, String[] titles) {
+    public CommonFragmentAdapter(FragmentManager fm, Fragment[] fragments, String[] titles) {
         super(fm);
         this.fragments = fragments;
         this.titles = titles;

@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.allin.matrix.R;
 import com.allin.matrix.base.BaseActivity;
-import com.allin.matrix.ui.adapter.TabFragmentAdapter;
+import com.allin.matrix.ui.adapter.CommonFragmentAdapter;
 import com.allin.matrix.ui.fragment.TabFragment0;
 import com.allin.matrix.ui.fragment.TabFragment1;
 import com.allin.matrix.ui.fragment.TabFragment2;
@@ -42,7 +42,7 @@ public class TabActivity extends BaseActivity {
         mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
 
-        mViewPager.setAdapter(new TabFragmentAdapter(getSupportFragmentManager(), mFragments, titles));
+        mViewPager.setAdapter(new CommonFragmentAdapter(getSupportFragmentManager(), mFragments, titles));
 
         mTabLayout.setupWithViewPager(mViewPager);
         for (int i = 0; i < mTabLayout.getTabCount(); i++) {
