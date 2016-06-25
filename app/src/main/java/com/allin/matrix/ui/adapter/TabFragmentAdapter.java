@@ -12,6 +12,11 @@ public class TabFragmentAdapter extends FragmentPagerAdapter {
     private Fragment[] fragments;
     private String[] titles;
 
+    public TabFragmentAdapter(FragmentManager fm, Fragment[] fragments) {
+        super(fm);
+        this.fragments = fragments;
+    }
+
     public TabFragmentAdapter(FragmentManager fm, Fragment[] fragments, String[] titles) {
         super(fm);
         this.fragments = fragments;
@@ -25,7 +30,7 @@ public class TabFragmentAdapter extends FragmentPagerAdapter {
      */
     @Override
     public Fragment getItem(int position) {
-        return fragments[position];
+        return fragments != null ? fragments[position] : null;
     }
 
     /**
@@ -33,12 +38,12 @@ public class TabFragmentAdapter extends FragmentPagerAdapter {
      */
     @Override
     public int getCount() {
-        return fragments.length;
+        return fragments != null ? fragments.length : 0;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return titles[position];
+        return titles != null ? titles[position] : null;
     }
 
 }
