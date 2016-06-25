@@ -15,7 +15,7 @@ import retrofit2.Retrofit;
  */
 public class GitHubEngine extends BaseEngine {
 
-    public List<Repo> getRepos(){
+    public static List<Repo> getRepos(){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.github.com/")
                 .build();
