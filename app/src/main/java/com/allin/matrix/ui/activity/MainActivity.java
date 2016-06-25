@@ -1,4 +1,4 @@
-package com.allin.matrix.activity;
+package com.allin.matrix.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,8 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.allin.matrix.R;
-import com.allin.matrix.adapter.MainAdapter;
+import com.allin.matrix.base.BaseActivity;
+import com.allin.matrix.ui.adapter.MainAdapter;
 
 /**
  * Created by a on 2016/6/20.

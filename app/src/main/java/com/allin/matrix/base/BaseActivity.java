@@ -1,4 +1,4 @@
-package com.allin.matrix.activity;
+package com.allin.matrix.base;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -9,7 +9,8 @@ import com.allin.matrix.util.LogUtil;
  * Created by a on 2016/4/29.
  * Author: Allin
  */
-class BaseActivity extends FragmentActivity {
+public class BaseActivity extends FragmentActivity {
+
     protected final String TAG = getTAG();
 
     @Override
@@ -17,7 +18,6 @@ class BaseActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
         LogUtil.i(TAG, "onCreate");
     }
-
     @Override
     protected void onStart() {
         super.onStart();

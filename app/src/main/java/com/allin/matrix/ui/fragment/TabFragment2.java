@@ -1,4 +1,4 @@
-package com.allin.matrix.fragment;
+package com.allin.matrix.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.allin.matrix.R;
+import com.allin.matrix.base.BaseFragment;
 
 /**
  * Created by a on 2016/6/21.

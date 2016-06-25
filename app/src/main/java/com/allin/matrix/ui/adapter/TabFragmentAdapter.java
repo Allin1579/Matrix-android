@@ -1,4 +1,4 @@
-package com.allin.matrix.adapter;
+package com.allin.matrix.ui.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

@@ -1,4 +1,4 @@
-package com.allin.matrix.activity;
+package com.allin.matrix.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -9,10 +9,11 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.allin.matrix.R;
-import com.allin.matrix.adapter.TabFragmentAdapter;
-import com.allin.matrix.fragment.TabFragment0;
-import com.allin.matrix.fragment.TabFragment1;
-import com.allin.matrix.fragment.TabFragment2;
+import com.allin.matrix.base.BaseActivity;
+import com.allin.matrix.ui.adapter.TabFragmentAdapter;
+import com.allin.matrix.ui.fragment.TabFragment0;
+import com.allin.matrix.ui.fragment.TabFragment1;
+import com.allin.matrix.ui.fragment.TabFragment2;
 
 public class TabActivity extends BaseActivity {
     private TabLayout mTabLayout;

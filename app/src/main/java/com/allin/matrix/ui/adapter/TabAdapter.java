@@ -1,4 +1,4 @@
-package com.allin.matrix.adapter;
+package com.allin.matrix.ui.adapter;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

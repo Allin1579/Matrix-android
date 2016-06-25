@@ -1,4 +1,4 @@
-package com.allin.matrix.fragment;
+package com.allin.matrix.base;
 
 import android.content.Context;
 import android.os.Bundle;

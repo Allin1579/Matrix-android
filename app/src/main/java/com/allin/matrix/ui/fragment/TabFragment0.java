@@ -1,4 +1,4 @@
-package com.allin.matrix.fragment;
+package com.allin.matrix.ui.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,12 +8,13 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.allin.matrix.R;
+import com.allin.matrix.base.BaseFragment;
 
 /**
  * Created by a on 2016/6/21.
  * Author: Allin
  */
-public class TabFragment1 extends BaseFragment {
+public class TabFragment0 extends BaseFragment {
     private TextView textView;
 
     @Nullable
@@ -26,6 +27,6 @@ public class TabFragment1 extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         textView = (TextView) view.findViewById(R.id.text);
-        textView.setText("111");
+        textView.setText("000");
     }
 }

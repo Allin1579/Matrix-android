@@ -1,4 +1,4 @@
-package com.allin.matrix.adapter;
+package com.allin.matrix.ui.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
