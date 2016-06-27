@@ -13,8 +13,13 @@ import com.allin.matrix.base.BaseFragment;
 /**
  * Created by Allin on 2016/6/21.
  */
-public class TabFragment0 extends BaseFragment {
+public class TabFragment extends BaseFragment {
     private TextView textView;
+
+    private Bundle mBundle;
+
+    public TabFragment() {
+    }
 
     @Nullable
     @Override
@@ -25,7 +30,17 @@ public class TabFragment0 extends BaseFragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        textView = (TextView) view.findViewById(R.id.text);
-        textView.setText("000");
+        initView(view);
     }
+
+    private void initView(View view){
+        textView = (TextView) view.findViewById(R.id.text);
+        String title = mBundle.getString("title");
+        textView.setText(title);
+    }
+
+    public void bundleData(Bundle bundle){
+        mBundle = bundle;
+    }
+
 }

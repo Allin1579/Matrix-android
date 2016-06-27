@@ -2,7 +2,6 @@ package com.allin.matrix.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,9 +10,7 @@ import android.widget.TextView;
 import com.allin.matrix.R;
 import com.allin.matrix.base.BaseActivity;
 import com.allin.matrix.ui.adapter.CommonFragmentAdapter;
-import com.allin.matrix.ui.fragment.TabFragment0;
-import com.allin.matrix.ui.fragment.TabFragment1;
-import com.allin.matrix.ui.fragment.TabFragment2;
+import com.allin.matrix.ui.fragment.TabFragment;
 
 /**
  * Created by Allin on 2016/6/20.
@@ -22,7 +19,7 @@ public class TabActivity extends BaseActivity {
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
 
-    private Fragment[] mFragments;
+    private TabFragment[] mFragments;
     private String[] titles;
 
     @Override
@@ -30,14 +27,19 @@ public class TabActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
 
-        mFragments = new Fragment[]{
-                new TabFragment0(),
-                new TabFragment1(),
-                new TabFragment2(),
+        mFragments = new TabFragment[]{
+                new TabFragment(),
+                new TabFragment(),
+                new TabFragment(),
         };
         titles = new String[]{
                 "菠萝", "蓝莓", "西瓜"
         };
+        Bundle bundle = new Bundle();
+        for (int i = 0; i < mFragments.length; i++){
+            bundle.putString("title", titles[i]);
+            mFragments[i].bundleData(bundle);
+        }
         initView();
     }
 
