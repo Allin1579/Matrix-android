@@ -18,7 +18,8 @@ public class MainActivity extends BaseActivity {
     private ListView listView;
 
     private String[] activitys = {
-        "TabActivity"
+        "TabActivity",
+        "BlurActivity",
     };
 
     @Override
@@ -34,7 +35,7 @@ public class MainActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 try {
-                    String activity = String.format("com.allin.matrix.activity.%s", activitys[position]);
+                    String activity = String.format("com.allin.matrix.ui.activity.%s", activitys[position]);
                     Intent intent = new Intent(MainActivity.this, Class.forName(activity));
                     startActivity(intent);
                 } catch (ClassNotFoundException e) {
