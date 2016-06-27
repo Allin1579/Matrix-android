@@ -10,8 +10,7 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 
 /**
- * Created by a on 2016/6/25.
- * Author: Allin
+ * Created by Allin on 2016/6/25.
  */
 public class GitHubEngine extends BaseEngine {
 

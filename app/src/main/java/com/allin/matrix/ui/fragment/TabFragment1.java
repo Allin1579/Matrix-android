@@ -11,8 +11,7 @@ import com.allin.matrix.R;
 import com.allin.matrix.base.BaseFragment;
 
 /**
- * Created by a on 2016/6/21.
- * Author: Allin
+ * Created by Allin on 2016/6/21.
  */
 public class TabFragment1 extends BaseFragment {
     private TextView textView;

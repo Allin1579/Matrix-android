@@ -15,6 +15,9 @@ import com.allin.matrix.ui.fragment.TabFragment0;
 import com.allin.matrix.ui.fragment.TabFragment1;
 import com.allin.matrix.ui.fragment.TabFragment2;
 
+/**
+ * Created by Allin on 2016/6/20.
+ */
 public class TabActivity extends BaseActivity {
     private TabLayout mTabLayout;
     private ViewPager mViewPager;

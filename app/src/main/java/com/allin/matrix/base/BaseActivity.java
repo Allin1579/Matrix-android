@@ -6,8 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import com.allin.matrix.util.LogUtil;
 
 /**
- * Created by a on 2016/4/29.
- * Author: Allin
+ * Created by Allin on 2016/4/29.
  */
 public class BaseActivity extends FragmentActivity {
 

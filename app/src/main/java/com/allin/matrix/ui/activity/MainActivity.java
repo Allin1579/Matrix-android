@@ -12,8 +12,7 @@ import com.allin.matrix.base.BaseActivity;
 import com.allin.matrix.ui.adapter.MainAdapter;
 
 /**
- * Created by a on 2016/6/20.
- * Author: Allin
+ * Created by Allin on 2016/6/20.
  */
 public class MainActivity extends BaseActivity {
     private ListView listView;

@@ -5,8 +5,7 @@ import android.util.Log;
 import com.allin.matrix.Config;
 
 /**
- * Created by a on 2016/6/20.
- * Author: Allin
+ * Created by Allin on 2016/6/20.
  */
 public class LogUtil {
     private static final int N = 0;

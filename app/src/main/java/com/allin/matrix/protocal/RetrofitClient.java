@@ -1,8 +1,7 @@
 package com.allin.matrix.protocal;
 
 /**
- * Created by a on 2016/6/25.
- * Author: Allin
+ * Created by Allin on 2016/6/25.
  */
 public class RetrofitClient {
 

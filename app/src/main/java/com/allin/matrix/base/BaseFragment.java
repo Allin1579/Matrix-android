@@ -11,8 +11,7 @@ import android.view.ViewGroup;
 import com.allin.matrix.util.LogUtil;
 
 /**
- * Created by a on 2016/4/29.
- * Author: Allin
+ * Created by Allin on 2016/4/29.
  */
 public class BaseFragment extends Fragment {
     protected final String TAG = getTAG();

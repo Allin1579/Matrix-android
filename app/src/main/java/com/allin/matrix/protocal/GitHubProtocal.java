@@ -11,8 +11,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 /**
- * Created by a on 2016/6/25.
- * Author: Allin
+ * Created by Allin on 2016/6/25.
  */
 public interface GitHubProtocal extends BaseProtocal {
     @GET("users/{user}/repos")

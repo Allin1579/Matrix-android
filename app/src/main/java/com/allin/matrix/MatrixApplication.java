@@ -6,8 +6,7 @@ import com.allin.matrix.util.LogUtil;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
- * Created by a on 2016/6/20.
- * Author: Allin
+ * Created by Allin on 2016/6/20.
  */
 public class MatrixApplication extends Application {
     private final String TAG = "MatrixApplication";

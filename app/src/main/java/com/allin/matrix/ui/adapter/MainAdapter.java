@@ -10,8 +10,7 @@ import android.widget.TextView;
 import com.allin.matrix.R;
 
 /**
- * Created by a on 2016/6/21.
- * Author: Allin
+ * Created by Allin on 2016/6/21.
  */
 public class MainAdapter extends BaseAdapter{
     private String[] activitys;
