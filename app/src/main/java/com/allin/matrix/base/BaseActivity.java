@@ -8,7 +8,7 @@ import com.allin.matrix.util.LogUtil;
 /**
  * Created by Allin on 2016/4/29.
  */
-public class BaseActivity extends FragmentActivity {
+ public abstract class BaseActivity extends FragmentActivity {
 
     protected final String TAG = getTAG();
 

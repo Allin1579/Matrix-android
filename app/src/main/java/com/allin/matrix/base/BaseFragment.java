@@ -13,7 +13,7 @@ import com.allin.matrix.util.LogUtil;
 /**
  * Created by Allin on 2016/4/29.
  */
-public class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
     protected final String TAG = getTAG();
 
     @Override
