@@ -27,10 +27,17 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initView();
+        initEvent();
+    }
+
+    private void initView(){
         listView = (ListView) findViewById(R.id.list);
         ListAdapter adapter = new MainAdapter(activitys);
         listView.setAdapter(adapter);
+    }
 
+    private void initEvent(){
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -43,7 +50,6 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
-
     }
 
 }
