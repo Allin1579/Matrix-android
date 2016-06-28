@@ -20,6 +20,7 @@ public class MainActivity extends BaseActivity {
     private String[] activitys = {
         "TabActivity",
         "BlurActivity",
+        "BlurringActivity",
     };
 
     @Override
