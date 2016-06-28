@@ -2,6 +2,8 @@ package com.allin.matrix.ui.activity;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
 import com.allin.matrix.R;
@@ -22,16 +24,29 @@ public class BlurActivity extends BaseActivity {
 
     private void initView(){
         iv_blur = (ImageView) findViewById(R.id.iv_blur);
-        BlurUtil blurUtil = new BlurUtil.BlurBuilder()
-                .setRadius(20)
-                .setCanReuseInBitmap(true)
-                .build();
-        Bitmap bitmap = iv_blur.getDrawingCache();
-        blurUtil.blur(this, bitmap, iv_blur);
+        applyBlur(iv_blur);
     }
 
     private void initEvent(){
 
+    }
+
+    private void applyBlur(final View view){
+        view.getViewTreeObserver().addOnPreDrawListener(new ViewTreeObserver.OnPreDrawListener() {
+            @Override
+            public boolean onPreDraw() {
+                view.getViewTreeObserver().removeOnPreDrawListener(this);
+                view.buildDrawingCache();
+                Bitmap bitmap = view.getDrawingCache();
+
+                BlurUtil blurUtil = new BlurUtil.BlurBuilder()
+                    .setRadius(20)
+                    .setCanReuseInBitmap(true)
+                    .build();
+                blurUtil.blur(BlurActivity.this, bitmap, iv_blur);
+                return true;
+            }
+        });
     }
 
 }

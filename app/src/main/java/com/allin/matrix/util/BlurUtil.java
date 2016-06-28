@@ -19,22 +19,27 @@ public class BlurUtil {
     private boolean canReuseInBitmap = true;
 
     private BlurUtil(){
-
+        //禁止外部构造
     }
 
     public void blur(Context context, Bitmap bmp, View view) {
-//        rsBlur(context,bmp, view);
+        rsBlur(context,bmp, view);
     }
 
+    /**
+     * renderScript实现高斯模糊
+     * @param context
+     * @param bmp
+     * @param view
+     */
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
     private void rsBlur(Context context, Bitmap bmp, View view){
-        Bitmap overlay = Bitmap.createBitmap(50, 50, Bitmap.Config.ARGB_8888);
+        Bitmap overlay = Bitmap.createBitmap(view.getWidth(), view.getHeight(), Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(overlay);
         canvas.drawBitmap(bmp, 0, 0, null);
         RenderScript rs = RenderScript.create(context);
         Allocation overlayAlloc = Allocation.createFromBitmap(rs, overlay);
-        ScriptIntrinsicBlur blur =
-                ScriptIntrinsicBlur.create(rs, overlayAlloc.getElement());
+        ScriptIntrinsicBlur blur = ScriptIntrinsicBlur.create(rs, overlayAlloc.getElement());
         blur.setInput(overlayAlloc);
         blur.setRadius(radius);
         blur.forEach(overlayAlloc);
@@ -43,9 +48,15 @@ public class BlurUtil {
         rs.destroy();
     }
 
+    /**
+     * java实现高斯模糊
+     * @param context
+     * @param bmp
+     * @param view
+     */
     private void fastBlur(Context context, Bitmap bmp, View view){
         Bitmap sentBitmap = bmp;
-        Bitmap bitmap = bmp;
+        Bitmap bitmap;
         int radius = 20;
         if (canReuseInBitmap) {
             bitmap = sentBitmap;
@@ -247,7 +258,7 @@ public class BlurUtil {
         }
 
         bitmap.setPixels(pix, 0, w, 0, 0, w, h);
-
+        view.setBackground(new BitmapDrawable(context.getResources(), bitmap));
     }
 
     public static class BlurBuilder{
