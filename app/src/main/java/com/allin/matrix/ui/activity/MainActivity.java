@@ -21,6 +21,7 @@ public class MainActivity extends BaseActivity {
         "TabActivity",
         "BlurActivity",
         "BlurringActivity",
+        "RerofitActivity",
     };
 
     @Override
@@ -32,13 +33,15 @@ public class MainActivity extends BaseActivity {
         initEvent();
     }
 
-    private void initView(){
+    @Override
+    protected void initView(){
         listView = (ListView) findViewById(R.id.list);
         ListAdapter adapter = new MainAdapter(activitys);
         listView.setAdapter(adapter);
     }
 
-    private void initEvent(){
+    @Override
+    protected void initEvent(){
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

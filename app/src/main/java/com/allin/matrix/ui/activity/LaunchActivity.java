@@ -30,7 +30,8 @@ public class LaunchActivity extends BaseActivity {
 
     }
 
-    private void initView(){
+    @Override
+    protected void initView(){
         iv_launch = (ImageView) findViewById(R.id.iv_launch);
         String url = mLaunchEngine.getLaunchImg();
         ImageLoader.load(this, url, iv_launch);
@@ -56,7 +57,8 @@ public class LaunchActivity extends BaseActivity {
         iv_launch.startAnimation(animation);
     }
 
-    private void initEvent(){
+    @Override
+    protected void initEvent(){
 
     }
 

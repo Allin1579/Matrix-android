@@ -22,12 +22,14 @@ public class BlurActivity extends BaseActivity {
         initEvent();
     }
 
-    private void initView(){
+    @Override
+    protected void initView(){
         iv_blur = (ImageView) findViewById(R.id.iv_blur);
         applyBlur(iv_blur);
     }
 
-    private void initEvent(){
+    @Override
+    protected void initEvent(){
 
     }
 

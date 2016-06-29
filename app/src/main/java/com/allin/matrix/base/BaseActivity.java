@@ -59,6 +59,10 @@ import com.allin.matrix.util.LogUtil;
         LogUtil.i(TAG, "onLowMemory");
     }
 
+    protected abstract void initView();
+
+    protected abstract void initEvent();
+
     private String getTAG(){
         Class clazz = this.getClass();
         return clazz.getSimpleName();

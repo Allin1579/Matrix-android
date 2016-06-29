@@ -43,7 +43,8 @@ public class TabActivity extends BaseActivity {
         initView();
     }
 
-    private void initView(){
+    @Override
+    protected void initView(){
         mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
 
@@ -70,6 +71,11 @@ public class TabActivity extends BaseActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void initEvent() {
+
     }
 
     private View getTabView(int position){

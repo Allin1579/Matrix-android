@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.allin.matrix.util.LogUtil;
 
 /**
- * Created by Allin on 2016/4/29.
+ * Created by Allin on 2016/6/25.
  */
 public abstract class BaseFragment extends Fragment {
     protected final String TAG = getTAG();
@@ -94,6 +94,10 @@ public abstract class BaseFragment extends Fragment {
         super.onLowMemory();
         LogUtil.i(TAG, "onLowMemory");
     }
+
+    protected abstract void initView(View view);
+
+    protected abstract void initEvent();
 
     public String getTAG() {
         return TAG;

@@ -31,12 +31,19 @@ public class TabFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         initView(view);
+        initEvent();
     }
 
-    private void initView(View view){
+    @Override
+    protected void initView(View view){
         textView = (TextView) view.findViewById(R.id.text);
         String title = mBundle.getString("title");
         textView.setText(title);
+    }
+
+    @Override
+    protected void initEvent() {
+
     }
 
     public void bundleData(Bundle bundle){
