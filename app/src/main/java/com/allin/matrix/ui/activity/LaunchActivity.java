@@ -23,7 +23,7 @@ public class LaunchActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
 
-        mLaunchEngine = LaunchEngine.getInstance();
+        mLaunchEngine = LaunchEngine.createInstance();
 
         initView();
         initEvent();

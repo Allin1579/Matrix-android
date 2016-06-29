@@ -6,14 +6,9 @@ import com.allin.matrix.base.BaseEngine;
  * Created by Allin on 2016/6/27.
  */
 public class LaunchEngine extends BaseEngine {
-    private static LaunchEngine INSTANCE = new LaunchEngine();
 
-    private LaunchEngine(){
-
-    }
-
-    public static LaunchEngine getInstance(){
-        return INSTANCE;
+    public static LaunchEngine createInstance(){
+        return new LaunchEngine();
     }
 
     public String getLaunchImg(){

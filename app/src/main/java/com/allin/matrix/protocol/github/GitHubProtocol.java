@@ -1,4 +1,4 @@
-package com.allin.matrix.protocal;
+package com.allin.matrix.protocol.github;
 
 
 import com.allin.matrix.model.Repo;
@@ -12,7 +12,7 @@ import retrofit2.http.Path;
 /**
  * Created by Allin on 2016/6/25.
  */
-public interface GitHubProtocal{
+public interface GitHubProtocol {
     @GET("users/{user}/repos")
     Call<List<Repo>> listRepos(@Path("user") String user);
 }
