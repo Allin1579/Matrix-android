@@ -3,7 +3,12 @@ package com.allin.matrix.base;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import com.allin.matrix.common.event.Event;
+import com.allin.matrix.common.event.EventManager;
 import com.allin.matrix.util.LogUtil;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * Created by Allin on 2016/4/29.
@@ -51,6 +56,7 @@ import com.allin.matrix.util.LogUtil;
     protected void onDestroy() {
         super.onDestroy();
         LogUtil.i(TAG, "onDestroy");
+        unregisterEvent();
     }
 
     @Override
@@ -61,7 +67,24 @@ import com.allin.matrix.util.LogUtil;
 
     protected abstract void initView();
 
+    /**
+     *
+     * @return 返回值表示是否注册Event
+     */
     protected abstract void initEvent();
+
+    protected void registerEvent(){
+        EventManager.register(this);
+    }
+
+    protected void unregisterEvent(){
+        EventManager.unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(Object event){
+
+    }
 
     private String getTAG(){
         Class clazz = this.getClass();
