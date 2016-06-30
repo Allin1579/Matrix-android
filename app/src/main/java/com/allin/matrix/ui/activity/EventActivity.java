@@ -6,11 +6,8 @@ import android.widget.Toast;
 
 import com.allin.matrix.R;
 import com.allin.matrix.base.BaseActivity;
-import com.allin.matrix.common.event.Event;
 import com.allin.matrix.engine.EventEngine;
-
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
+import com.allin.matrix.util.LogUtil;
 
 public class EventActivity extends BaseActivity {
     private EventEngine mEventEngine;
@@ -19,20 +16,22 @@ public class EventActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
-        mEventEngine = new EventEngine();
+    }
 
-        initView();
-        initEvent();
+    @Override
+    protected void initVariables() {
+        mEventEngine = new EventEngine();
     }
 
     @Override
     protected void initView() {
-
+        LogUtil.i(TAG, "initView");
     }
 
     @Override
-    protected void initEvent() {
-        registerEvent();
+    protected boolean initEvent() {
+        LogUtil.i(TAG, "initEvent");
+        return true;
     }
 
     public void postEvent(View view){

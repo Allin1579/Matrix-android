@@ -26,7 +26,10 @@ public class TabActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab);
+    }
 
+    @Override
+    protected void initVariables() {
         mFragments = new TabFragment[]{
                 new TabFragment(),
                 new TabFragment(),
@@ -40,7 +43,6 @@ public class TabActivity extends BaseActivity {
             bundle.putString("title", titles[i]);
             mFragments[i].bundleData(bundle);
         }
-        initView();
     }
 
     @Override
@@ -74,8 +76,8 @@ public class TabActivity extends BaseActivity {
     }
 
     @Override
-    protected void initEvent() {
-
+    protected boolean initEvent() {
+        return false;
     }
 
     private View getTabView(int position){

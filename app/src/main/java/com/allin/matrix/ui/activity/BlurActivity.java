@@ -17,9 +17,11 @@ public class BlurActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blur);
+    }
 
-        initView();
-        initEvent();
+    @Override
+    protected void initVariables() {
+
     }
 
     @Override
@@ -29,8 +31,8 @@ public class BlurActivity extends BaseActivity {
     }
 
     @Override
-    protected void initEvent(){
-
+    protected boolean initEvent(){
+        return false;
     }
 
     private void applyBlur(final View view){

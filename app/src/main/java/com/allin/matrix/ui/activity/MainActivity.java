@@ -29,9 +29,11 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
 
-        initView();
-        initEvent();
+    @Override
+    protected void initVariables() {
+
     }
 
     @Override
@@ -42,7 +44,7 @@ public class MainActivity extends BaseActivity {
     }
 
     @Override
-    protected void initEvent(){
+    protected boolean initEvent(){
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -55,6 +57,8 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
+
+        return false;
     }
 
 }

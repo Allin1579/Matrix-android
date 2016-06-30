@@ -3,7 +3,6 @@ package com.allin.matrix.base;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
-import com.allin.matrix.common.event.Event;
 import com.allin.matrix.common.event.EventManager;
 import com.allin.matrix.util.LogUtil;
 
@@ -22,6 +21,7 @@ import org.greenrobot.eventbus.ThreadMode;
         super.onCreate(savedInstanceState);
         LogUtil.i(TAG, "onCreate");
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -65,13 +65,25 @@ import org.greenrobot.eventbus.ThreadMode;
         LogUtil.i(TAG, "onLowMemory");
     }
 
+    @Override
+    public void setContentView(int layoutResID) {
+        super.setContentView(layoutResID);
+        initVariables();
+        initView();
+        if(initEvent()){
+            registerEvent();
+        }
+    }
+
+    protected abstract void initVariables();
+
     protected abstract void initView();
 
     /**
-     *
+     * 初始化事件
      * @return 返回值表示是否注册Event
      */
-    protected abstract void initEvent();
+    protected abstract boolean initEvent();
 
     protected void registerEvent(){
         EventManager.register(this);
@@ -81,6 +93,7 @@ import org.greenrobot.eventbus.ThreadMode;
         EventManager.unregister(this);
     }
 
+    @SuppressWarnings("unused")
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(Object event){
 

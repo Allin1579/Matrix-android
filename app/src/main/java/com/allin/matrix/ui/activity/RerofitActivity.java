@@ -17,7 +17,10 @@ public class RerofitActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rerofit);
+    }
 
+    @Override
+    protected void initVariables() {
         mRetrofitEngine = new RetrofitEngine();
     }
 
@@ -27,8 +30,8 @@ public class RerofitActivity extends BaseActivity {
     }
 
     @Override
-    protected void initEvent() {
-
+    protected boolean initEvent() {
+        return false;
     }
 
     public void get(View view){

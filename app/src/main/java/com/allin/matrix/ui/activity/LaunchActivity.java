@@ -22,12 +22,11 @@ public class LaunchActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
+    }
 
+    @Override
+    protected void initVariables() {
         mLaunchEngine = LaunchEngine.createInstance();
-
-        initView();
-        initEvent();
-
     }
 
     @Override
@@ -58,8 +57,8 @@ public class LaunchActivity extends BaseActivity {
     }
 
     @Override
-    protected void initEvent(){
-
+    protected boolean initEvent(){
+        return false;
     }
 
 }
