@@ -22,6 +22,7 @@ public class MainActivity extends BaseActivity {
         "BlurActivity",
         "BlurringActivity",
         "RerofitActivity",
+        "EventActivity",
     };
 
     @Override
