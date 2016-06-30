@@ -8,7 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.allin.matrix.common.event.EventManager;
 import com.allin.matrix.util.LogUtil;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * Created by Allin on 2016/6/25.
@@ -39,6 +43,11 @@ public abstract class BaseFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         LogUtil.i(TAG, "onViewCreated");
+        initVariables();
+        initView(view);
+        if(initEvent()){
+            registerEvent();
+        }
     }
 
     @Override
@@ -75,6 +84,7 @@ public abstract class BaseFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         LogUtil.i(TAG, "onDestroyView");
+        unregisterEvent();
     }
 
     @Override
@@ -95,12 +105,33 @@ public abstract class BaseFragment extends Fragment {
         LogUtil.i(TAG, "onLowMemory");
     }
 
+    protected abstract void initVariables();
+
     protected abstract void initView(View view);
 
-    protected abstract void initEvent();
+    /**
+     * 初始化事件
+     * @return 返回值标示是否注册Event
+     */
+    protected abstract boolean initEvent();
 
-    public String getTAG() {
-        return TAG;
+    protected void registerEvent(){
+        EventManager.register(this);
+    }
+
+    protected void unregisterEvent(){
+        EventManager.unregister(this);
+    }
+
+    @SuppressWarnings("unused")
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onEvent(Object event){
+
+    }
+
+    private String getTAG() {
+        Class clazz = this.getClass();
+        return clazz.getSimpleName();
     }
 
 }

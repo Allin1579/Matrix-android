@@ -81,7 +81,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
     /**
      * 初始化事件
-     * @return 返回值表示是否注册Event
+     * @return 返回值标示是否注册Event
      */
     protected abstract boolean initEvent();
 
