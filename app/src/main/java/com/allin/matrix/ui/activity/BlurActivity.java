@@ -16,16 +16,16 @@ public class BlurActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+    }
+
+    @Override
+    protected void initVariables(Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    protected void initView(Bundle savedInstanceState){
         setContentView(R.layout.activity_blur);
-    }
-
-    @Override
-    protected void initVariables() {
-
-    }
-
-    @Override
-    protected void initView(){
         iv_blur = (ImageView) findViewById(R.id.iv_blur);
         applyBlur(iv_blur);
     }

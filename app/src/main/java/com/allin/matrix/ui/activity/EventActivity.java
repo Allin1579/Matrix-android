@@ -15,17 +15,17 @@ public class EventActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event);
     }
 
     @Override
-    protected void initVariables() {
+    protected void initVariables(Bundle savedInstanceState) {
         mEventEngine = new EventEngine();
     }
 
     @Override
-    protected void initView() {
+    protected void initView(Bundle savedInstanceState) {
         LogUtil.i(TAG, "initView");
+        setContentView(R.layout.activity_event);
     }
 
     @Override

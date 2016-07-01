@@ -16,16 +16,16 @@ public class RerofitActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_rerofit);
     }
 
     @Override
-    protected void initVariables() {
+    protected void initVariables(Bundle savedInstanceState) {
         mRetrofitEngine = new RetrofitEngine();
     }
 
     @Override
-    protected void initView() {
+    protected void initView(Bundle savedInstanceState) {
+        setContentView(R.layout.activity_rerofit);
         tv = (TextView) findViewById(R.id.text);
     }
 

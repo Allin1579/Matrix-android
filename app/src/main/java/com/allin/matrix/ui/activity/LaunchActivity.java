@@ -21,16 +21,16 @@ public class LaunchActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_launch);
     }
 
     @Override
-    protected void initVariables() {
+    protected void initVariables(Bundle savedInstanceState) {
         mLaunchEngine = LaunchEngine.createInstance();
     }
 
     @Override
-    protected void initView(){
+    protected void initView(Bundle savedInstanceState){
+        setContentView(R.layout.activity_launch);
         iv_launch = (ImageView) findViewById(R.id.iv_launch);
         String url = mLaunchEngine.getLaunchImg();
         ImageLoader.load(this, url, iv_launch);

@@ -25,11 +25,10 @@ public class TabActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab);
     }
 
     @Override
-    protected void initVariables() {
+    protected void initVariables(Bundle savedInstanceState) {
         mFragments = new TabFragment[]{
                 new TabFragment(),
                 new TabFragment(),
@@ -46,7 +45,8 @@ public class TabActivity extends BaseActivity {
     }
 
     @Override
-    protected void initView(){
+    protected void initView(Bundle savedInstanceState){
+        setContentView(R.layout.activity_tab);
         mTabLayout = (TabLayout) findViewById(R.id.tab_layout);
         mViewPager = (ViewPager) findViewById(R.id.view_pager);
 

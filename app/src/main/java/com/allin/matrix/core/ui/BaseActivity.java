@@ -20,6 +20,11 @@ import org.greenrobot.eventbus.ThreadMode;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         LogUtil.i(TAG, "onCreate");
+        initVariables(savedInstanceState);
+        initView(savedInstanceState);
+        if(initEvent()){
+            registerEvent();
+        }
     }
 
     @Override
@@ -65,19 +70,9 @@ import org.greenrobot.eventbus.ThreadMode;
         LogUtil.i(TAG, "onLowMemory");
     }
 
-    @Override
-    public void setContentView(int layoutResID) {
-        super.setContentView(layoutResID);
-        initVariables();
-        initView();
-        if(initEvent()){
-            registerEvent();
-        }
-    }
+    protected abstract void initVariables(Bundle savedInstanceState);
 
-    protected abstract void initVariables();
-
-    protected abstract void initView();
+    protected abstract void initView(Bundle savedInstanceState);
 
     /**
      * 初始化事件
