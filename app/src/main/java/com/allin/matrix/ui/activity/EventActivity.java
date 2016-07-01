@@ -9,6 +9,9 @@ import com.allin.matrix.core.ui.BaseActivity;
 import com.allin.matrix.engine.EventEngine;
 import com.allin.matrix.util.LogUtil;
 
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 public class EventActivity extends BaseActivity {
     private EventEngine mEventEngine;
 
@@ -38,9 +41,9 @@ public class EventActivity extends BaseActivity {
         mEventEngine.post();
     }
 
-    @Override
-    public void onEvent(Object event){
-        Toast.makeText(this, event.toString(), Toast.LENGTH_SHORT).show();
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMsgEvent(String msg){
+        LogUtil.i(TAG, msg);
     }
 
 }

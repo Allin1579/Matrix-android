@@ -3,6 +3,7 @@ package com.allin.matrix.core.ui;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import com.allin.matrix.core.event.Event;
 import com.allin.matrix.core.event.EventManager;
 import com.allin.matrix.util.LogUtil;
 
@@ -75,7 +76,7 @@ import org.greenrobot.eventbus.ThreadMode;
     protected abstract void initView(Bundle savedInstanceState);
 
     /**
-     * 初始化事件
+     *
      * @return 返回值标示是否注册Event
      */
     protected abstract boolean initEvent();
@@ -90,7 +91,7 @@ import org.greenrobot.eventbus.ThreadMode;
 
     @SuppressWarnings("unused")
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onEvent(Object event){
+    public void onEvent(Event event){
 
     }
 

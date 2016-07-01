@@ -27,6 +27,7 @@
         <activity android:name=".ui.activity.BlurringActivity" />
         <activity android:name=".ui.activity.RerofitActivity" />
         <activity android:name=".ui.activity.EventActivity"/>
+        <activity android:name=".ui.activity.LifeActivity"/>
     </application>
 
 </manifest>

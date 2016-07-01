@@ -9,7 +9,12 @@ import android.widget.ListView;
 
 import com.allin.matrix.R;
 import com.allin.matrix.core.ui.BaseActivity;
+import com.allin.matrix.model.MessageEvent;
 import com.allin.matrix.ui.adapter.MainAdapter;
+import com.allin.matrix.util.LogUtil;
+
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * Created by Allin on 2016/6/20.
@@ -23,6 +28,7 @@ public class MainActivity extends BaseActivity {
         "BlurringActivity",
         "RerofitActivity",
         "EventActivity",
+        "LifeActivity",
     };
 
     @Override
@@ -58,7 +64,12 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        return false;
+        return true;
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMsgEvent(MessageEvent msg){
+        LogUtil.i(TAG, "onMsgEvent");
     }
 
 }
