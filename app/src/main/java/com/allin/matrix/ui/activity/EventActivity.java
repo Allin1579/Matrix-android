@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.allin.matrix.R;
+import com.allin.matrix.core.event.Event;
 import com.allin.matrix.core.ui.BaseActivity;
 import com.allin.matrix.engine.EventEngine;
 import com.allin.matrix.util.LogUtil;
@@ -41,9 +42,8 @@ public class EventActivity extends BaseActivity {
         mEventEngine.post();
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onMsgEvent(String msg){
-        LogUtil.i(TAG, msg);
+    @Override
+    public void onEvent(Event event) {
+        super.onEvent(event);
     }
-
 }
