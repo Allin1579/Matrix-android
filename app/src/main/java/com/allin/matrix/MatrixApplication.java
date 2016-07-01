@@ -2,6 +2,7 @@ package com.allin.matrix;
 
 import android.app.Application;
 
+import com.allin.matrix.core.crash.CrashHandler;
 import com.allin.matrix.util.LogUtil;
 
 /**
@@ -14,6 +15,9 @@ public class MatrixApplication extends Application {
     public void onCreate() {
         super.onCreate();
         LogUtil.i(TAG, "onCreate");
+
+        //异常捕获
+        CrashHandler.getInstance().init(this);
 
     }
 

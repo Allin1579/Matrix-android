@@ -18,7 +18,7 @@ import org.greenrobot.eventbus.ThreadMode;
  * Created by Allin on 2016/6/25.
  */
 public abstract class BaseFragment extends Fragment {
-    protected final String TAG = getTAG();
+    protected final String TAG = getClass().getSimpleName();
 
     @Override
     public void onAttach(Context context) {
@@ -127,11 +127,6 @@ public abstract class BaseFragment extends Fragment {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(Object event){
 
-    }
-
-    private String getTAG() {
-        Class clazz = this.getClass();
-        return clazz.getSimpleName();
     }
 
 }

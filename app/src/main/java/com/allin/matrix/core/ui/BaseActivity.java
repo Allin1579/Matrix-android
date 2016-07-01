@@ -14,7 +14,7 @@ import org.greenrobot.eventbus.ThreadMode;
  */
  public abstract class BaseActivity extends FragmentActivity {
 
-    protected final String TAG = getTAG();
+    protected final String TAG = getClass().getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,11 +92,6 @@ import org.greenrobot.eventbus.ThreadMode;
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(Object event){
 
-    }
-
-    private String getTAG(){
-        Class clazz = this.getClass();
-        return clazz.getSimpleName();
     }
 
 }

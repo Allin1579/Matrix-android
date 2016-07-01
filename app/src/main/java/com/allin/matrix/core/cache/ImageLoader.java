@@ -40,6 +40,10 @@ public class ImageLoader {
 
     }
 
+    public static void clearMemoryCache(){
+
+    }
+
     public interface LoadCallback{
         void onSuccess();
         void onError();
