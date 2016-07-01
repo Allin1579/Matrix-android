@@ -8,7 +8,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import com.allin.matrix.R;
-import com.allin.matrix.base.BaseActivity;
+import com.allin.matrix.core.ui.BaseActivity;
 import com.allin.matrix.ui.adapter.MainAdapter;
 
 /**

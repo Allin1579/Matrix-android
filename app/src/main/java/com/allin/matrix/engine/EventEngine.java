@@ -1,8 +1,7 @@
 package com.allin.matrix.engine;
 
-import com.allin.matrix.base.BaseEngine;
-import com.allin.matrix.common.event.EventManager;
-import com.allin.matrix.model.MessageEvent;
+import com.allin.matrix.core.engine.BaseEngine;
+import com.allin.matrix.core.event.EventManager;
 
 /**
  * Created by Allin on 2016/6/30.

@@ -1,4 +1,4 @@
-package com.allin.matrix.base;
+package com.allin.matrix.core.ui;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.allin.matrix.common.event.EventManager;
+import com.allin.matrix.core.event.EventManager;
 import com.allin.matrix.util.LogUtil;
 
 import org.greenrobot.eventbus.Subscribe;

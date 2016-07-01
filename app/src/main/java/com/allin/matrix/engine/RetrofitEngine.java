@@ -1,6 +1,6 @@
 package com.allin.matrix.engine;
 
-import com.allin.matrix.base.BaseEngine;
+import com.allin.matrix.core.engine.BaseEngine;
 import com.allin.matrix.model.Repo;
 import com.allin.matrix.protocol.github.GitHubProtocol;
 

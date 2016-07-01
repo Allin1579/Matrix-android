@@ -1,4 +1,4 @@
-package com.allin.matrix.common.event;
+package com.allin.matrix.core.event;
 
 /**
  * Created by Allin on 2016/6/30.

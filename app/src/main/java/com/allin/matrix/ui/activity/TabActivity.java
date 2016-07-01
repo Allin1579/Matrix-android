@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.allin.matrix.R;
-import com.allin.matrix.base.BaseActivity;
+import com.allin.matrix.core.ui.BaseActivity;
 import com.allin.matrix.ui.adapter.CommonFragmentAdapter;
 import com.allin.matrix.ui.fragment.TabFragment;
 
