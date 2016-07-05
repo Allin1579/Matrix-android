@@ -2,16 +2,12 @@ package com.allin.matrix.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Toast;
 
 import com.allin.matrix.R;
 import com.allin.matrix.core.event.Event;
 import com.allin.matrix.core.ui.BaseActivity;
 import com.allin.matrix.engine.EventEngine;
 import com.allin.matrix.util.LogUtil;
-
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
 public class EventActivity extends BaseActivity {
     private EventEngine mEventEngine;
