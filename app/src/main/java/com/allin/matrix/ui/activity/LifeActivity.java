@@ -3,7 +3,7 @@ package com.allin.matrix.ui.activity;
 import android.os.Bundle;
 
 import com.allin.matrix.R;
-import com.allin.matrix.core.ui.BaseActivity;
+import com.allin.matrix.base.ui.BaseActivity;
 import com.allin.matrix.util.LogUtil;
 
 /**

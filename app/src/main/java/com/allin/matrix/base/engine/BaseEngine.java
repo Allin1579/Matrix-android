@@ -1,6 +1,6 @@
-package com.allin.matrix.core.engine;
+package com.allin.matrix.base.engine;
 
-import com.allin.matrix.protocol.Server;
+import com.allin.matrix.net.protocol.Server;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -11,11 +11,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public abstract class BaseEngine {
 
     protected Retrofit getRetrofit(){
-        Retrofit retrofit = new Retrofit.Builder()
+        return new Retrofit.Builder()
                 .baseUrl(Server.BaseUrl)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        return retrofit;
     }
 
 }

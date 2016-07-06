@@ -1,4 +1,4 @@
-package com.allin.matrix.core.crash;
+package com.allin.matrix.base.crash;
 
 import android.content.Context;
 

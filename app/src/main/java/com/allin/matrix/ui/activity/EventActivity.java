@@ -4,8 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.allin.matrix.R;
-import com.allin.matrix.core.event.Event;
-import com.allin.matrix.core.ui.BaseActivity;
+import com.allin.matrix.support.event.Event;
+import com.allin.matrix.base.ui.BaseActivity;
 import com.allin.matrix.engine.EventEngine;
 import com.allin.matrix.util.LogUtil;
 

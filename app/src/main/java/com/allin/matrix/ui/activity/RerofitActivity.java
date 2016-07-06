@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.allin.matrix.R;
-import com.allin.matrix.core.ui.BaseActivity;
+import com.allin.matrix.base.ui.BaseActivity;
 import com.allin.matrix.engine.RetrofitEngine;
 
 public class RerofitActivity extends BaseActivity {

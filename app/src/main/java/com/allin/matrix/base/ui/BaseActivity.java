@@ -1,10 +1,10 @@
-package com.allin.matrix.core.ui;
+package com.allin.matrix.base.ui;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
-import com.allin.matrix.core.event.Event;
-import com.allin.matrix.core.event.EventManager;
+import com.allin.matrix.support.event.Event;
+import com.allin.matrix.support.event.EventManager;
 import com.allin.matrix.util.LogUtil;
 
 import org.greenrobot.eventbus.Subscribe;

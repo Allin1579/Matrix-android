@@ -1,4 +1,4 @@
-package com.allin.matrix.protocol;
+package com.allin.matrix.net.protocol;
 
 /**
  * Created by Allin on 2016/6/29.

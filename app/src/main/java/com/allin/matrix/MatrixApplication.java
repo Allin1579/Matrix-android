@@ -2,7 +2,7 @@ package com.allin.matrix;
 
 import android.app.Application;
 
-import com.allin.matrix.core.crash.CrashHandler;
+import com.allin.matrix.base.crash.CrashHandler;
 import com.allin.matrix.util.LogUtil;
 
 /**

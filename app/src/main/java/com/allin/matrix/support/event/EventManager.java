@@ -1,4 +1,4 @@
-package com.allin.matrix.core.event;
+package com.allin.matrix.support.event;
 
 import org.greenrobot.eventbus.EventBus;
 

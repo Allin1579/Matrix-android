@@ -1,4 +1,4 @@
-package com.allin.matrix.core.cache;
+package com.allin.matrix.support.cache;
 
 import android.content.Context;
 import android.widget.ImageView;

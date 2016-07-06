@@ -7,8 +7,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.allin.matrix.R;
-import com.allin.matrix.core.ui.BaseActivity;
-import com.allin.matrix.core.cache.ImageLoader;
+import com.allin.matrix.base.ui.BaseActivity;
+import com.allin.matrix.support.cache.ImageLoader;
 import com.allin.matrix.engine.LaunchEngine;
 
 /**

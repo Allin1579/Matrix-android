@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.allin.matrix.R;
-import com.allin.matrix.core.ui.BaseFragment;
+import com.allin.matrix.base.ui.BaseFragment;
 
 /**
  * Created by Allin on 2016/6/21.

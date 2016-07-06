@@ -7,7 +7,7 @@ import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
 import com.allin.matrix.R;
-import com.allin.matrix.core.ui.BaseActivity;
+import com.allin.matrix.base.ui.BaseActivity;
 import com.allin.matrix.util.BlurUtil;
 
 public class BlurActivity extends BaseActivity {

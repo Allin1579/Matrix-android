@@ -1,4 +1,4 @@
-package com.allin.matrix.protocol.github;
+package com.allin.matrix.net.protocol.github;
 
 
 import com.allin.matrix.model.Repo;
